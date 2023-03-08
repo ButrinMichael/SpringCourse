@@ -9,7 +9,25 @@
 
 
     <bean        id = "myPet"
-    class = "com.zaurtregulov.spring.spring_course.spring_introduction.Cat">
+    class = "com.zaurtregulov.spring.spring_course.spring_introduction.Dog">
         
     </bean>
+    
+                                                         <!--Dependency Injections With Construktor--> 
+<!--    <bean   id = "myPerson"
+    class = "com.zaurtregulov.spring.spring_course.spring_introduction.Person">
+
+        <constructor-arg ref="myPet"></constructor-arg>
+    
+    </bean>-->
+    
+    
+                                                            <!--Dependency Injections With Setter--> 
+        <bean   id = "myPerson"
+    class = "com.zaurtregulov.spring.spring_course.spring_introduction.Person">
+    <property name="pet" ref ="myPet"/>
+    
+    </bean>
+    
+    
 </beans>
