@@ -20,6 +20,9 @@ public class Test3 {
         
         Person person = context.getBean("myPerson", Person.class);
         person.callYourPet();
+        System.out.print("Persons surname is " + person.getSurname());
+        System.out.println(" and his age is " + person.getAge());
+        
         
         context.close();
         
