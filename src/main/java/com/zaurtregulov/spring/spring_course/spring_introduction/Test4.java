@@ -12,13 +12,13 @@ public class Test4 {
         
         
         Dog myDog = context.getBean("myPet", Dog.class);
-        myDog.setName("Belka");
+//        myDog.setName("Belka");
         Dog yourDog = context.getBean("myPet", Dog.class);
-        yourDog.setName("Strelka");
+//        yourDog.setName("Strelka");
         System.out.println("Are the variables referencing the same object? " + (myDog == yourDog));
         System.out.println(myDog);
         System.out.println(yourDog);
-        System.out.println("myDog name is: " + myDog.getName() + " /yourDog name is: " + yourDog.getName());
+//        System.out.println("myDog name is: " + myDog.getName() + " /yourDog name is: " + yourDog.getName());
         context.close();
     }
 }
