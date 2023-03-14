@@ -17,7 +17,7 @@ public class ConfigWithAnotation1 {
   
 Person person = context.getBean("personBean", Person.class);
 person.callYourPet();
-
+        System.out.println(person.getSurname() + " " + person.getAge());
 
 
 context.close();

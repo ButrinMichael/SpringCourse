@@ -2,24 +2,33 @@
 package com.zaurtregulov.spring.spring_course.spring_introduction;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 @Component("personBean")
 public class Person {
-        
+//    @Autowired
+//@Qualifier ("catBean")    // аннотация которая уточняеет к какому конкретно классу нужно делать зависимость, когда есть более одного возможых
    private Pet pet;
+                               //   @Value("Treguuuuulov")
+//   @Value ("${person.surname}")
    private String surname;
+                                //   @Value ("33")
+//   @Value ("${person.age}")
    private int age;
    
+   
    @Autowired
-   public Person (Pet pet){
+   
+   public Person (@Qualifier ("catBean")Pet pet){
        System.out.println("Person bin is created");
    this.pet=pet;
    }
    
-//      public Person (){
-//       System.out.println("Person bin is created");
-//  
-//   }
+      public Person (){
+       System.out.println("Person bin is created");
+  
+   }
 
     public int getAge() {
         return age;
@@ -42,6 +51,8 @@ public class Person {
        
    
    // pet->setPet
+//    @Autowired
+//    @Qualifier("dog")
    public void setPet (Pet pet){
        System.out.println("Class Person: set Pet");
        this.pet=pet;  
